@@ -16,6 +16,7 @@ x500: chamb343
 		<title>Email Confirmation</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -63,8 +64,13 @@ x500: chamb343
                   <?php
                     if(!empty($_POST)){
                       extract($_POST);
-                      $WholeMessage = $name." said the following from Your Portfolio: \n".$message;
+
+                      echo("Name is: ".$name."\n");
+                      echo("Email is: ".$email."\n");
+                      echo("Message is: ".$message."\n");
+                      $WholeMessage = $name." from ".$email." said the following from Your Portfolio webpage: \n".$message;
                       $result = mail("mackchamberlain@gmail.com", "New Email From your Portfolio", $WholeMessage);
+                      echo("Result is: ".$result."\n");
                       if($result){
                         echo("The Email has been sent successfully.");
                       }else{
