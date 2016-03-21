@@ -62,7 +62,7 @@ x500: chamb343
 							<div class="wrapper">
 								<div class="inner">
                   <?php
-                    mail("mack@mackchamberlain.codes","My Subject", "Some Content");
+                    mail("mack@mackchamberlain.codes","My Subject", "Some Content", "From: mack@mackchamberlain.codes");
                     if(!empty($_POST)){
                       extract($_POST);
 
@@ -70,7 +70,8 @@ x500: chamb343
                       echo("Email is: ".$email."\n");
                       echo("Message is: ".$message."\n");
                       $WholeMessage = $name." from ".$email." said the following from Your Portfolio webpage: \n".$message;
-                      $result = mail("mackchamberlain@gmail.com", "New Email From your Portfolio", $WholeMessage);
+                      $headers = "From: ".$email;
+                      $result = mail("mackchamberlain@gmail.com", "New Email From your Portfolio", $WholeMessage, $headers);
                       echo("Result is: ".$result."\n");
                       if($result){
                         echo("The Email has been sent successfully.");
