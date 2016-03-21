@@ -62,6 +62,7 @@ x500: chamb343
 							<div class="wrapper">
 								<div class="inner">
                   <?php
+                    mail("mack@mackchamberlain.codes","My Subject", "Some Content");
                     if(!empty($_POST)){
                       extract($_POST);
 
