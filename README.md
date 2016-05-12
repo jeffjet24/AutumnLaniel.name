@@ -9,5 +9,4 @@ This is a portfolio website project for my Girlfriend, Autumn Laniel.
 * Fitting Pictures found from the Web
 
 # Plans
-I plan to develop this website with the assistance of my girlfriend, to make this the best representation of her abilities as possible.
-The website is currently in development, and can be found at www.AutumnRose.video .
+This Website has been determined as finished, as it is a tool for her to display her abilities in an online portfolio. However, as she finishes projects and videos, this website is of course going to be updated with that new content. 
